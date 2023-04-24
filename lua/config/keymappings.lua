@@ -2,16 +2,15 @@ local keymap = vim.keymap.set
 local silent = { silent = true }
 
 -- Better window movement
-keymap("n", "<C-h>", "<C-w>h", silent)
-keymap("n", "<C-j>", "<C-w>j", silent)
-keymap("n", "<C-k>", "<C-w>k", silent)
-keymap("n", "<C-l>", "<C-w>l", silent)
+keymap("n", "<C-h>", "<C-w>h", {silent=true, desc="Window movement"})
+keymap("n", "<C-j>", "<C-w>j", {silent=true, desc="Window movement"})
+keymap("n", "<C-k>", "<C-w>k", {silent=true, desc="Window movement"})
+keymap("n", "<C-l>", "<C-w>l", {silent=true, desc="Window movement"})
 
 -- H to move to the first non-blank character of the line
-keymap("n", "H", "^", silent)
+keymap("n", "H", "^", {silent=true, desc="Move to first non-blank char"})
 
--- Move selected line / block of text in visual mode
-keymap("x", "K", ":move '<-2<CR>gv-gv", silent)
+-- Move selected line / block of text in visual mode keymap("x", "K", ":move '<-2<CR>gv-gv", silent)
 keymap("x", "J", ":move '>+1<CR>gv-gv", silent)
 
 -- Keep visual mode indenting
@@ -19,19 +18,20 @@ keymap("v", "<", "<gv", silent)
 keymap("v", ">", ">gv", silent)
 
 -- Case change in visual mode
-keymap("v", "`", "u", silent)
-keymap("v", "<A-`>", "U", silent)
+keymap("v", "`", "u", {silent = true, desc="Change case"})
+keymap("v", "<A-`>", "U", {silent = true, desc="Change case"})
 
 -- Save file by CTRL-S
-keymap("n", "<C-s>", ":w<CR>", silent)
-keymap("i", "<C-s>", "<ESC> :w<CR>", silent)
+keymap("n", "<C-s>", ":w<CR>", {silent = true, desc = "Save"})
+keymap("i", "<C-s>", "<ESC> :w<CR>", {silent = true, desc = "Save"})
 
 -- Telescope
-keymap("n", "<C-p>", "<CMD>lua require('plugins.telescope').project_files()<CR>")
-keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>")
+keymap("n", "<C-p>", "<CMD>lua require('plugins.telescope').project_files()<CR>", {desc ='View project files (git)'})
+keymap("n", "<S-p>", "<CMD>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {desc = "Live grep (with shortcuts)"})
+keymap("n", "<Leader>R", "<CMD>lua require('telescope.builtin').lsp_references()<CR>", {desc="View references"})
 
 -- Remove highlights
-keymap("n", "<CR>", ":noh<CR><CR>", silent)
+keymap("n", "<CR>", ":noh<CR><CR>", {silent=true, desc="Remove highlights"})
 
 -- Find word/file across project
 keymap("n", "<Leader>pf",
