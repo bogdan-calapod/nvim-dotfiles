@@ -1,12 +1,12 @@
 require "octo".setup({
   default_remote = { "upstream", "origin" }, -- order to try remotes
   ssh_aliases = {},                      -- SSH aliases. e.g. `ssh_aliases = {["github.com-work"] = "github.com"}`
-  reaction_viewer_hint_icon = "r",       -- marker for user reactions
+  reaction_viewer_hint_icon = "💬",       -- marker for user reactions
   user_icon = "👤 ",                      -- user icon
   timeline_marker = "📑",                 -- timeline marker
   timeline_indent = "2",                 -- timeline indentation
-  right_bubble_delimiter = "",          -- bubble delimiter
-  left_bubble_delimiter = "",           -- bubble delimiter
+  right_bubble_delimiter = "💭",          -- bubble delimiter
+  left_bubble_delimiter = "💬🗨️",           -- bubble delimiter
   github_hostname = "",                  -- GitHub Enterprise host
   snippet_context_lines = 4,             -- number or lines around commented lines
   gh_env = {},                           -- extra environment variables to pass on to GitHub CLI, can be a table or function returning a table
@@ -49,6 +49,7 @@ require "octo".setup({
       add_label = { lhs = "<space>la", desc = "add label" },
       remove_label = { lhs = "<space>ld", desc = "remove label" },
       goto_issue = { lhs = "<space>gi", desc = "navigate to a local repo issue" },
+      add_comment = { lhs = "<space>ca", desc = "add comment" },
       delete_comment = { lhs = "<space>cd", desc = "delete comment" },
       next_comment = { lhs = "]c", desc = "go to next comment" },
       prev_comment = { lhs = "[c", desc = "go to previous comment" },
