@@ -1,4 +1,12 @@
 return {
+  -- Extra language stuff
+  {
+    "dmmulroy/tsc.nvim",
+    lazy = false,
+    config = function()
+      require('tsc').setup()
+    end
+  },
   --VimGit
   {
     "ldelossa/gh.nvim",
