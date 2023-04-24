@@ -15,7 +15,7 @@ tokyonight.setup({
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value `:help attr-list`
-    comments = "NONE",
+    comments = "italic",
     keywords = "italic",
     functions = "NONE",
     variables = "NONE",
@@ -27,7 +27,7 @@ tokyonight.setup({
   day_brightness = 0.3,            -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
   hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
   dim_inactive = false,            -- dims inactive windows
-  lualine_bold = false,            -- When `true`, section headers in the lualine theme will be bold
+  lualine_bold = true,            -- When `true`, section headers in the lualine theme will be bold
   --- You can override specific color groups to use other groups or a hex color
   --- function will be called with a ColorScheme table
   on_colors = function(colors)
@@ -74,6 +74,8 @@ vim.api.nvim_set_hl(0, "EcovimSecondaryBold", { bold = true, fg = "#FFA630" })
 vim.api.nvim_set_hl(0, "EcovimHeader", { bold = true, fg = "#488DFF" })
 vim.api.nvim_set_hl(0, "EcovimHeaderInfo", { bold = true, fg = "#FFA630" })
 vim.api.nvim_set_hl(0, "EcovimFooter", { bold = true, fg = "#FFA630" })
+
+vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None"})
 
 -- Tokyonight Colorscheme Specific Config
 if EcoVim.colorscheme == "tokyonight" then

@@ -8,6 +8,15 @@ return {
       require('plugins.gh')
     end,
   },
+  -- Octo
+  {
+    "pwntester/octo.nvim",
+    lazy = false,
+    dependencies = {'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require('plugins.octo')
+    end,
+  },
 	-- Themes
 	{
 		"folke/tokyonight.nvim",

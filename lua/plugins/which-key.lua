@@ -253,6 +253,28 @@ local normal_mode_mappings = {
     }
   },
 
+  o = {
+    name = 'Octo',
+    a = { '<cmd>Octo actions<CR>', 'List all available actions'},
+    c = { '<cmd>Octo pr create<CR>', 'Create PR'},
+    b = { '<cmd>Octo pr browser<CR>', 'Open PR in browser'},
+    l = { '<cmd>Octo pr list<CR>', 'Open PR list'},
+    m = { '<cmd>Octo pr merge squash delete<CR>', 'Merge w/ Squash'},
+    r = {
+      name = 'Review',
+      a = { '<cmd>Octo comment add<CR>', 'Add comment'},
+      r = { '<cmd>Octo thread resolve<CR>', 'Resolve thread'},
+      u = {'<cmd>Octo thread unresolve', 'Unresolve thread'},
+      c = { '<cmd>Octo review comments<CR>', 'View pending comments'},
+      s = { '<cmd>Octo review start<CR>', 'Start review'},
+      m = { '<cmd>Octo review submit<CR>', 'Submit review'},
+      d = { '<cmd>Octo review discard<CR>', 'Discard review'},
+      x = { '<cmd>Octo review close<CR>', 'Close review'}
+
+    },
+    x = { '<cmd>Octo pr close<CR>', 'Close PR'},
+  },
+
   p = {
     name = 'Project',
     f = { 'file' },
