@@ -156,11 +156,11 @@ vim.api.nvim_set_keymap(
 	"<cmd>lua require('nvim-tree.api').tree.toggle()<CR>",
 	{ noremap = true, silent = true }
 )
-
-nvim_tree_events.on_tree_open(function()
-	bufferline_api.set_offset(TREE_WIDTH + 1, utils.add_whitespaces(13) .. "File Explorer")
-end)
-
-nvim_tree_events.on_tree_close(function()
-	bufferline_api.set_offset(0)
-end)
+--
+-- nvim_tree_events.on_tree_open(function()
+-- 	bufferline_api.set_offset(TREE_WIDTH + 1, utils.add_whitespaces(13) .. "File Explorer")
+-- end)
+--
+-- nvim_tree_events.on_tree_close(function()
+-- 	bufferline_api.set_offset(0)
+-- end)
