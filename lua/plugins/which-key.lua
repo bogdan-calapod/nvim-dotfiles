@@ -299,6 +299,8 @@ local normal_mode_mappings = {
     m = { 'toggle' },
     t = { 'tableize' },
   },
+
+  T = { '<cmd>TSC<CR>', 'Typecheck w/ TS'}
 }
 
 local visual_mode_mappings = {
