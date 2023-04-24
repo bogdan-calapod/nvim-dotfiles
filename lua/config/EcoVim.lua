@@ -25,7 +25,7 @@ EcoVim = {
 				enabled = true,
 			},
 			copilot = {
-				enabled = true,
+				enabled = false,
 			},
 			tabnine = {
 				enabled = false,
