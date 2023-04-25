@@ -357,15 +357,16 @@ return {
 				"LSP[tsserver] Inlay Hints request failed. File not opened in the editor.",
 			}
 			vim.notify = function(msg, ...)
-				for _, banned in ipairs(banned_messages) do
-					if msg == banned then
-						return
-					end
-				end
-				require("notify")(msg, ...)
-			end
-		end,
-	},
+        for _, banned in ipairs(banned_messages) do
+          if msg == banned then
+            return
+          end
+        end
+        local notification_record = require("notify")(msg, ...)
+        return notification_record
+      end
+    end
+  },
 	{
 		"vuki656/package-info.nvim",
 		event = "BufEnter package.json",
