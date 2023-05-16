@@ -58,6 +58,7 @@ map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve t
 -- Other maps
 map("n", "<leader>ce", "<cmd>NiceReference<CR>", { desc = "Go to r[e]ferences" })
 map("n", "<leader>ue", "<cmd>set relativenumber!<CR>", { desc = "Toggle relative line numbers" })
+map("n", "<leader>gb", "<cmd>Git blame<CR>", { desc = "Git blame" })
 
 -- Codeium
 map("i", "<C-g>", function()
