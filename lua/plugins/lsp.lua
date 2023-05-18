@@ -37,6 +37,7 @@ return {
     opts = {
       ensure_installed = {
         "ruff-lsp",
+        -- "python-lsp-server",
         "pyright",
         "autopep8",
       },
