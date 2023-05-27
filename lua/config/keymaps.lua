@@ -14,6 +14,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- NeoTest map
+map("n", "<leader>j", function() end, { desc = "Neotest" })
 map("n", "<leader>jj", function()
   require("neotest").run.run()
 end, { desc = "Run test at cursor" })
@@ -54,6 +55,10 @@ map("n", "<leader>gorc", "<cmd>Octo review comments<CR>", { desc = "View pending
 map("n", "<leader>goca", "<cmd>Octo comment add<CR>", { desc = "Add comment" })
 map("n", "<leader>gotr", "<cmd>Octo thread resolve<CR>", { desc = "Resolve thread" })
 map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve thread" })
+
+-- Advanced Git Search
+map("n", "<leader>ga", function() end, { desc = "Advanced Git" })
+map("n", "<leader>gad", "<cmd>Telescope advanced_git_search diff_branch_file<CR>", { desc = "Diff with branch " })
 
 -- Other maps
 map("n", "<leader>ce", "<cmd>NiceReference<CR>", { desc = "Go to r[e]ferences" })
