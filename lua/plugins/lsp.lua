@@ -22,7 +22,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
+        -- "python",
         "query",
         "regex",
         "tsx",
@@ -38,9 +38,32 @@ return {
       ensure_installed = {
         "ruff-lsp",
         -- "python-lsp-server",
-        "pyright",
+        -- "pyright",
         "autopep8",
       },
     },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      -- PyLSP config
+      require("lspconfig").pylsp.setup({
+        settings = {
+          jedi_completion = {
+            include_class_objects = true,
+            include_function_objects = true,
+            fuzzy = true,
+            eager = true,
+          },
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                enabled = false,
+              },
+            },
+          },
+        },
+      })
+    end,
   },
 }
