@@ -5,5 +5,5 @@
 -- Run black % on save on python files
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = { "*.py" },
-  command = "!black %",
+  command = "!autopep8 --in-place --aggressive --aggressive %",
 })
