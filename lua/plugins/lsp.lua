@@ -45,25 +45,18 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      -- PyLSP config
-      require("lspconfig").pylsp.setup({
-        settings = {
-          jedi_completion = {
-            include_class_objects = true,
-            include_function_objects = true,
-            fuzzy = true,
-            eager = true,
-          },
-          pylsp = {
-            plugins = {
-              pycodestyle = {
-                enabled = false,
-              },
-            },
-          },
-        },
-      })
-    end,
-  },
+    opts = {
+      servers = {
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = {enabled = false}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
