@@ -51,12 +51,20 @@ return {
           settings = {
             pylsp = {
               plugins = {
-                pycodestyle = {enabled = false}
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+                autopep8 = { enabled = false },
+                pycodestyle = { enabled = false },
+                pyflakes = { enabled = false },
+                yapf = { enabled = false },
+                rope_autoimport = { enabled = true },
+                jedi_completion = {
+                  eager = true,
+                  fuzzy = true,
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+  },
 }
