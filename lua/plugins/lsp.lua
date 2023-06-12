@@ -38,7 +38,7 @@ return {
       ensure_installed = {
         "ruff-lsp",
         -- "python-lsp-server",
-        -- "pyright",
+        "pyright",
         "autopep8",
       },
     },
