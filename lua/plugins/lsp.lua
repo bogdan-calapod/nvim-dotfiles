@@ -12,7 +12,6 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    --   dependencies = { "nvim-treesitter/nvim-treesitter-angular" },
     opts = {
       ensure_installed = {
         "bash",
@@ -22,7 +21,7 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        -- "python",
+        "python",
         "query",
         "regex",
         "tsx",
@@ -37,7 +36,6 @@ return {
     opts = {
       ensure_installed = {
         "ruff-lsp",
-        -- "python-lsp-server",
         "pyright",
         "autopep8",
       },
@@ -47,19 +45,14 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        pylsp = {
+        pyright = {
           settings = {
-            pylsp = {
-              plugins = {
-                autopep8 = { enabled = false },
-                pycodestyle = { enabled = false },
-                pyflakes = { enabled = false },
-                yapf = { enabled = false },
-                rope_autoimport = { enabled = true },
-                jedi_completion = {
-                  eager = true,
-                  fuzzy = true,
-                },
+            python = {
+              analysis = {
+                autoImportCompletions = true,
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = false,
+                diagnosticMode = "openFilesOnly",
               },
             },
           },
