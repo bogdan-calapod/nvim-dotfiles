@@ -56,6 +56,8 @@ map("n", "<leader>goca", "<cmd>Octo comment add<CR>", { desc = "Add comment" })
 map("n", "<leader>gotr", "<cmd>Octo thread resolve<CR>", { desc = "Resolve thread" })
 map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve thread" })
 
+-- Notify
+map("n", "<leader>uN", "<cmd>Telescope notify <CR>", { desc = "View all notifications" })
 -- Advanced Git Search
 map("n", "<leader>ga", function() end, { desc = "Advanced Git" })
 map("n", "<leader>gad", "<cmd>Telescope advanced_git_search diff_branch_file<CR>", { desc = "Diff with branch " })
