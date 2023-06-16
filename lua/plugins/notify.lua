@@ -4,15 +4,10 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
+      fps = 10,
       background_colour = "#000000",
-      stages = "fade",
-      icons = {
-        DEBUG = "🟨",
-        ERROR = "🔴",
-        INFO = "🔵",
-        TRACE = "🟣",
-        WARN = "🟠",
-      },
+      stages = "static",
+      render = "compact",
     },
   },
 }
