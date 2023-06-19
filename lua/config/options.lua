@@ -7,6 +7,8 @@ vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None" })
 
 -- Enable spell check by default
 vim.api.nvim_set_option("spell", true)
+-- Set spelloptions type to camel
+vim.api.nvim_set_option("spelloptions", "camel")
 
 -- WSL2 Clipboard Sync
 vim.g.clipboard = {
