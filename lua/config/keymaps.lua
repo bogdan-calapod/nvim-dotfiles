@@ -40,6 +40,11 @@ map("n", "<leader>jo", function()
 end, { desc = "Toggle output panel" })
 
 -- Octo map
+map("n", "<leader>go", "<cmd>Octo<CR>", { desc = "Open Octo" })
+map("n", "<leader>goc", "<cmd>Octo <CR>", { desc = "Add comment" })
+map("n", "<leader>gop", "<cmd>Octo <CR>", { desc = "Pull Request" })
+map("n", "<leader>gor", "<cmd>Octo <CR>", { desc = "Review" })
+map("n", "<leader>got", "<cmd>Octo <CR>", { desc = "Thread" })
 map("n", "<leader>gopl", "<cmd>Octo pr list<CR>", { desc = "Open PR list" })
 map("n", "<leader>gopc", "<cmd>Octo pr create<CR>", { desc = "Create PR" })
 map("n", "<leader>gopk", "<cmd>Octo pr checkout<CR>", { desc = "Checkout PR" })
