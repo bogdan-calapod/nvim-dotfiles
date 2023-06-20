@@ -2,6 +2,12 @@
 return {
   { "brenoprata10/nvim-highlight-colors" },
   {
+    "navarasu/onedark.nvim",
+    opts = {
+      transparent = true
+    }
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = { transparent_background = true },
