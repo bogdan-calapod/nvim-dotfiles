@@ -390,3 +390,9 @@ Api
 CVE
 apps
 serializer
+CVSS
+Weaponized
+cvss
+cve
+vulns
+sender
