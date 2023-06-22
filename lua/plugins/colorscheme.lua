@@ -11,9 +11,18 @@ return {
     }
   },
   {
+    "EdenEast/nightfox.nvim",
+    opts = {
+      options = {
+        transparent = true,
+        terminal_colors = true,
+      }
+    }
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "carbonfox",
     }
   },
 }
