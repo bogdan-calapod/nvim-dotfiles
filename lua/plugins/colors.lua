@@ -16,10 +16,4 @@ return {
       vim.g.aurora_transparent = 1
     end,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
 }
