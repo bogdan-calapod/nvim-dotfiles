@@ -10,6 +10,7 @@ return {
       }
     }
   },
+  { "ellisonleao/gruvbox.nvim", opts = { transparent_mode = true } },
   {
     "EdenEast/nightfox.nvim",
     opts = {
@@ -22,7 +23,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "gruvbox",
     }
   },
 }
