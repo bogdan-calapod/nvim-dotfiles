@@ -52,6 +52,7 @@ return {
       ensure_installed = {
         "prettierd",
         "ruff-lsp",
+        "css-lsp",
         "pyright",
         "autopep8",
       },
@@ -68,6 +69,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        cssls = {},
         pyright = {
           settings = {
             python = {
