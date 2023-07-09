@@ -2,6 +2,15 @@
 return {
   { "brenoprata10/nvim-highlight-colors" },
   {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      css = true,
+      css_fn = true,
+      hsl_fn = true,
+      tailwind = true,
+    }
+  },
+  {
     "tomasiser/vim-code-dark",
     config = function()
       vim.g.codedark_transparent = 1
