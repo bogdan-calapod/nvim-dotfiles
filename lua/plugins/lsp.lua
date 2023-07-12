@@ -2,6 +2,9 @@
 
 return {
   {
+    "dgagn/diagflow.nvim", opts = { scope = 'line' }
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
@@ -15,7 +18,8 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "neovim/nvim-lspconfig",
-    }
+    },
+    opts = {}
   },
   {
     "Wansmer/treesj",
