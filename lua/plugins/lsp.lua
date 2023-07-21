@@ -19,7 +19,9 @@ return {
       "nvim-lua/plenary.nvim",
       "neovim/nvim-lspconfig",
     },
-    opts = {}
+    opts = {
+      expose_as_code_action = { 'fix_all', 'add_missing_imports', 'remove_unused' }
+    }
   },
   {
     "Wansmer/treesj",
