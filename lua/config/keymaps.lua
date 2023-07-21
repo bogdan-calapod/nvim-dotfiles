@@ -60,6 +60,7 @@ map("n", "<leader>gorc", "<cmd>Octo review comments<CR>", { desc = "View pending
 map("n", "<leader>goca", "<cmd>Octo comment add<CR>", { desc = "Add comment" })
 map("n", "<leader>gotr", "<cmd>Octo thread resolve<CR>", { desc = "Resolve thread" })
 map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve thread" })
+map("n", "<leader>gt", "<cmd>GitTimeLapse<CR>", { desc = "Git Timelapse" })
 
 -- Notify
 map("n", "<leader>uN", "<cmd>Telescope notify <CR>", { desc = "View all notifications" })

@@ -4,6 +4,10 @@ return {
     opts = { current_line_blame = true },
   },
   {
+    "junkblocker/git-time-lapse",
+    lazy = false
+  },
+  {
     "ldelossa/gh.nvim",
     lazy = false,
     dependencies = { { "ldelossa/litee.nvim" } },
@@ -15,7 +19,7 @@ return {
         -- do not map any keys inside any gh.nvim buffers.
         disable_keymaps       = false,
         -- the icon set to use.
-        icon_set              = "nerd",
+        icon_set              = "default",
         -- any custom icons to use.
         icon_set_custom       = nil,
         -- whether to register the @username and #issue_number omnifunc completion
