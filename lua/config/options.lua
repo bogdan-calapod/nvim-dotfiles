@@ -12,22 +12,13 @@ vim.api.nvim_set_option("spelloptions", "camel")
 
 -- WSL2 Clipboard Sync
 vim.g.clipboard = {
-  name = "WslClipboard",
+  name = "win32yank",
   copy = {
-    ["+"] = { "clip.exe" },
-    ["*"] = { "clip.exe" },
+    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
+    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-i", "--crlf" },
   },
   paste = {
-    ["+"] = {
-      "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
-      "-c",
-      '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    },
-    ["*"] = {
-      "/mnt/c/Windows/System32/WindowsPowerShell/v1.0///powershell.exe",
-      "-c",
-      '[Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    },
+    ["+"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
+    ["*"] = { "/home/bogdan/.local/bin/win32yank.exe", "-o", "--lf" },
   },
-  cache_enabled = false,
 }
