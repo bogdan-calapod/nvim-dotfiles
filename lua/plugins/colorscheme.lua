@@ -11,6 +11,7 @@ return {
     }
   },
   { "ellisonleao/gruvbox.nvim", opts = { transparent_mode = true } },
+  { "folke/tokyonight.nvim",    opts = { transparent = true, styles = { sidebars = "transparent", floats = "transparent" } } },
   {
     "EdenEast/nightfox.nvim",
     opts = {
@@ -23,7 +24,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "tokyonight",
     }
   },
 }
