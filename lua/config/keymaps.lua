@@ -72,6 +72,7 @@ map("n", "<leader>gad", "<cmd>Telescope advanced_git_search diff_branch_file<CR>
 map("n", "<leader>ce", "<cmd>NiceReference<CR>", { desc = "Go to r[e]ferences" })
 map("n", "<leader>ue", "<cmd>set relativenumber!<CR>", { desc = "Toggle relative line numbers" })
 map("n", "<leader>gb", "<cmd>Git blame<CR>", { desc = "Git blame" })
+map("n", "<leader>ut", "<cmd>Telescope undo<cr>", { desc = "Undo tree" })
 
 -- Codeium
 map("i", "<C-g>", function()
