@@ -6,7 +6,7 @@ return {
     opts = {
       fps = 10,
       background_colour = "#000000",
-      stages = "static",
+      stages = "fade",
       render = "compact",
     },
   },
