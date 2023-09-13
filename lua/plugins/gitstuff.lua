@@ -17,10 +17,23 @@ return {
     },
     config = function()
       require("octo").setup({
-        use_local_fs = true,
+        use_local_fs = false,
         enable_builtin = true
       })
     end,
+  },
+  {
+    "topaxi/gh-actions.nvim",
+    cmd = 'GhActions',
+    keys = {
+      { '<leader>gha', '<cmd>GhActions<CR>', desc = "Open GH Actions" },
+    },
+    build = 'make',
+    dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' },
+    opts = {},
+    config = function(_, opts)
+      require('gh-actions').setup(opts)
+    end
   },
   {
     "ldelossa/gh.nvim",
