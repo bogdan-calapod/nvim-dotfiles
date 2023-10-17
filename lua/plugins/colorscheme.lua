@@ -1,24 +1,10 @@
 return {
   {
-    "navarasu/onedark.nvim",
-    lazy = true,
+    "folke/tokyonight.nvim",
     opts = {
-      style = "darker",
       transparent = true,
-      lualine = {
-        transparent = true
-      }
-    }
-  },
-  { "ellisonleao/gruvbox.nvim", opts = { transparent_mode = true } },
-  { "folke/tokyonight.nvim",    opts = { transparent = true, styles = { sidebars = "transparent", floats = "transparent" } } },
-  {
-    "EdenEast/nightfox.nvim",
-    opts = {
-      options = {
-        transparent = true,
-        terminal_colors = true,
-      }
+      -- Disable transparent floats because it borks Octo - should be fixed soon-ish based on Octo's commit history
+      styles = { sidebars = "transparent" } -- , floats = "transparent" },
     }
   },
   {
