@@ -495,3 +495,5 @@ urls
 from
 response
 base
+from
+urlpatterns
