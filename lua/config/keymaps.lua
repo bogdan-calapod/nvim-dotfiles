@@ -63,6 +63,9 @@ map("n", "<leader>gotr", "<cmd>Octo thread resolve<CR>", { desc = "Resolve threa
 map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve thread" })
 map("n", "<leader>gt", "<cmd>GitTimeLapse<CR>", { desc = "Git Timelapse" })
 
+-- Eureka
+map("n", "<leader>o", function() require("eureka").show_notes() end, { desc = "Eureka" })
+
 -- Notify
 map("n", "<leader>uN", "<cmd>Telescope notify <CR>", { desc = "View all notifications" })
 -- Advanced Git Search
