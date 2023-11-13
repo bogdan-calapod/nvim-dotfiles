@@ -5,6 +5,9 @@
 -- Set editable background to transparent
 vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None" })
 
+-- Ensure black respects string normalization
+vim.g.black_skip_string_normalization = 1
+
 -- Enable spell check by default
 vim.api.nvim_set_option("spell", true)
 -- Set spelloptions type to camel
