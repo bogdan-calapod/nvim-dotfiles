@@ -15,14 +15,20 @@ vim.api.nvim_set_option("spelloptions", "camel")
 
 -- WSL2 Clipboard Sync
 -- TODO: Find some way to auto-install `win32yank.exe` in the correct path
-vim.g.clipboard = {
-  name = "win32yank",
-  copy = {
-    ["+"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-i", "--crlf" },
-    ["*"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-i", "--crlf" },
-  },
-  paste = {
-    ["+"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-o", "--lf" },
-    ["*"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-o", "--lf" },
-  },
-}
+if os.getenv('WSLENV') ~= nil then
+  vim.g.clipboard = {
+    name = "win32yank",
+    copy = {
+      ["+"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-i", "--crlf" },
+      ["*"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-i", "--crlf" },
+    },
+    paste = {
+      ["+"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-o", "--lf" },
+      ["*"] = { "/home/" .. os.getenv('USER') .. "/.local/bin/win32yank.exe", "-o", "--lf" },
+    },
+  }
+else
+  vim.g.clipboard = {
+    name = "unnamedplus",
+  }
+end
