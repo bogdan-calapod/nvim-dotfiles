@@ -44,7 +44,7 @@ return {
         "prettierd",
         "css-lsp",
         "pyright",
-        "black"
+        "autopep8"
       },
     },
   },
