@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- Set editable background to transparent
-vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None" })
+-- vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None" })
 
 -- Ensure black respects string normalization
 vim.g.black_skip_string_normalization = 1
