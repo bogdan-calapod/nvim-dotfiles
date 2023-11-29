@@ -7,6 +7,8 @@ return {
       styles = {
         sidebars = "transparent",
         floats = "transparent",
+        comments = { italic = true },
+        keywords = { italic = true }
       },
       on_highlights = function(hl, colors)
         hl.LineNr = { bg = "none", fg = "#999999" }
