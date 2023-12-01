@@ -13,6 +13,12 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- Yank file path
+map("n", "<leader>y", function()
+  local filepath = vim.fn.expand('%')
+  vim.fn.setreg('+', filepath)
+end, { desc = 'Yank file path' })
+
 -- NeoTest map
 map("n", "<leader>j", function() end, { desc = "Neotest" })
 map("n", "<leader>jj", function()
