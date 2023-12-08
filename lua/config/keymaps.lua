@@ -45,6 +45,8 @@ map("n", "<leader>jo", function()
   require("neotest").output_panel.toggle()
 end, { desc = "Toggle output panel" })
 
+map("n", "<leader>cc", "<cmd>Copilot panel<CR>", { desc = "Open Copilot panel" })
+
 -- Octo map
 map("n", "<leader>go", "<cmd>Octo<CR>", { desc = "Open Octo" })
 map("n", "<leader>goc", "<cmd>Octo <CR>", { desc = "Add comment" })
@@ -58,6 +60,7 @@ map("n", "<leader>gopm",
 map("n", "<leader>gopc", "<cmd>Octo pr create<CR>", { desc = "Create PR" })
 map("n", "<leader>gopk", "<cmd>Octo pr checkout<CR>", { desc = "Checkout PR" })
 map("n", "<leader>gopb", "<cmd>Octo pr browser<CR>", { desc = "Open PR in browser" })
+map("n", "<leader>gopy", "<cmd>Octo pr url<CR>", { desc = "Copy PR URL" })
 map("n", "<leader>gopp", "<cmd>Octo pr checks<CR>", { desc = "View PR checks" })
 map("n", "<leader>gopr", "<cmd>Octo pr reload<CR>", { desc = "Reload PR" })
 map("n", "<leader>gora", "<cmd>Octo reviewer add<CR>", { desc = "Add reviewer" })
