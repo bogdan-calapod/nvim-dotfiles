@@ -25,6 +25,7 @@
   "git-time-lapse": { "branch": "master", "commit": "3b6f38ec13af04a29e822efda15c36b69f6972ff" },
   "gitsigns.nvim": { "branch": "main", "commit": "6ef8c54fb526bf3a0bc4efb0b2fe8e6d9a7daed2" },
   "goto-preview": { "branch": "main", "commit": "16ec236fabb40b2cebfe283b1d701338886462db" },
+  "harpoon": { "branch": "harpoon2", "commit": "8f67088e9d479397347b63e69920ee861a9838cd" },
   "indent-blankline.nvim": { "branch": "master", "commit": "29be0919b91fb59eca9e90690d76014233392bef" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "litee.nvim": { "branch": "main", "commit": "3c51764a615566e4c0223362f4be00acc23c430e" },
