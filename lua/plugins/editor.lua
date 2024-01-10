@@ -16,4 +16,12 @@ return {
       }
     }
   },
+  {
+    'lukas-reineke/virt-column.nvim',
+    opts = {
+      char = '▎',
+      highlight = 'CursorLineSign',
+      virtcolumn = '80,120'
+    }
+  }
 }
