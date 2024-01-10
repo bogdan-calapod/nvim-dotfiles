@@ -5,13 +5,15 @@
 -- Set editable background to transparent
 -- vim.api.nvim_set_hl(0, "OctoEditable", { bold = true, bg = "None" })
 
--- Ensure black respects string normalization
-vim.g.black_skip_string_normalization = 1
 
 -- Enable spell check by default
 vim.api.nvim_set_option("spell", true)
 -- Set spelloptions type to camel
 vim.api.nvim_set_option("spelloptions", "camel")
+
+-- Italic fonts
+vim.g.t_ZH = "[3m"
+vim.g.t_ZR = "[23m"
 
 -- WSL2 Clipboard Sync
 -- TODO: Find some way to auto-install `win32yank.exe` in the correct path
@@ -28,5 +30,5 @@ if os.getenv('WSL_DISTRO_NAME') then
     },
   }
 else
-  vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }
+  vim.opt.clipboard:append { 'unnamedplus' }
 end
