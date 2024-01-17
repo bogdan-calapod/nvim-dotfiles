@@ -41,10 +41,12 @@ return {
     opts = {
       ui = { border = "rounded" },
       ensure_installed = {
+        "bash-language-server",
         "prettierd",
         "css-lsp",
         "pyright",
-        "autopep8"
+        "autopep8",
+        "shellcheck"
       },
     },
   },
