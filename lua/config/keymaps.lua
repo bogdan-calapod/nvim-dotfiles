@@ -19,34 +19,6 @@ map("n", "<leader>y", function()
   vim.fn.setreg('+', filepath)
 end, { desc = 'Yank file path' })
 
--- NeoTest map
-map("n", "<leader>j", function() end, { desc = "Neotest" })
-map("n", "<leader>jj", function()
-  require("neotest").run.run()
-end, { desc = "Run test at cursor" })
-
-map("n", "<leader>jf", function()
-  require("neotest").run.run(vim.fn.expand("%"))
-end, { desc = "Run all tests in file" })
-
-map("n", "<leader>jx", function()
-  require("neotest").run.stop()
-end, { desc = "Stop test run" })
-
-map("n", "<leader>jr", function()
-  require("neotest").output.open({ enter = true, auto_close = true })
-end, { desc = "Toggle test result" })
-
-map("n", "<leader>js", function()
-  require("neotest").summary.toggle()
-end, { desc = "Toggle summary" })
-
-map("n", "<leader>jo", function()
-  require("neotest").output_panel.toggle()
-end, { desc = "Toggle output panel" })
-
-map("n", "<leader>cc", "<cmd>Copilot panel<CR>", { desc = "Open Copilot panel" })
-
 -- Octo map
 map("n", "<leader>go", "<cmd>Octo<CR>", { desc = "Open Octo" })
 map("n", "<leader>goc", "<cmd>Octo <CR>", { desc = "Add comment" })
