@@ -17,7 +17,7 @@ return {
     },
     config = function()
       require("octo").setup({
-        use_local_fs = false,
+        use_local_fs = true,
         enable_builtin = true
       })
     end,
