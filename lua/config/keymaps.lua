@@ -13,6 +13,9 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- Switch to last buffer with <Tab>
+map("n", "<Tab>", "<C-^>", { desc = "Switch to last buffer" })
+
 -- Yank file path
 map("n", "<leader>y", function()
   local filepath = vim.fn.expand('%')
