@@ -1,6 +1,15 @@
 -- Extra language server protocol options
 
 return {
+  { -- Bulb in gutter for code actions
+    'kosayoda/nvim-lightbulb',
+    config = function()
+      require('nvim-lightbulb').setup({
+        autocmd = { enabled = true },
+        number = { enabled = true }
+      })
+    end,
+  },
   { -- LSP Diagnostics in top right
     "dgagn/diagflow.nvim",
     opts = { scope = "line" },
