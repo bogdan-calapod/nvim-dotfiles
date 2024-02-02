@@ -23,5 +23,11 @@ return {
       highlight = 'CursorLineSign',
       virtcolumn = '80,120'
     }
+  { -- Auto save on focus lose
+    'tmillr/sos.nvim',
+    lazy = false,
+    config = function()
+      require('sos').setup()
+    end
   }
 }
