@@ -1,5 +1,5 @@
 return {
-  {
+  { -- Configure flash to zip through results easier
     "folke/flash.nvim",
     opts = {
       modes = {
@@ -16,13 +16,14 @@ return {
       }
     }
   },
-  {
+  { -- Add indent indicators
     'lukas-reineke/virt-column.nvim',
     opts = {
       char = '▎',
       highlight = 'CursorLineSign',
       virtcolumn = '80,120'
     }
+  },
   { -- Auto save on focus lose
     'tmillr/sos.nvim',
     lazy = false,
