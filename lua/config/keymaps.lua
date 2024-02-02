@@ -16,6 +16,9 @@ end
 -- Switch to last buffer with <Tab>
 map("n", "<Tab>", "<C-^>", { desc = "Switch to last buffer" })
 
+-- Zen Mode
+map("n", "<leader>cz", "<cmd>ZenMode<CR>", { desc = "🙏 Zen mode" })
+
 -- Yank file path
 map("n", "<leader>y", function()
   local filepath = vim.fn.expand('%')

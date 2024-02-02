@@ -30,5 +30,15 @@ return {
     config = function()
       require('sos').setup()
     end
+  },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      window = {
+        options = {
+          relativenumber = true,
+        },
+      },
+    }
   }
 }
