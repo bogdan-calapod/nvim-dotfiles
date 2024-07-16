@@ -2,11 +2,11 @@
 
 return {
   { -- Bulb in gutter for code actions
-    'kosayoda/nvim-lightbulb',
+    "kosayoda/nvim-lightbulb",
     config = function()
-      require('nvim-lightbulb').setup({
+      require("nvim-lightbulb").setup({
         autocmd = { enabled = true },
-        number = { enabled = true }
+        number = { enabled = true },
       })
     end,
   },
@@ -55,7 +55,7 @@ return {
         "css-lsp",
         "pyright",
         "autopep8",
-        "shellcheck"
+        "shellcheck",
       },
     },
   },
@@ -64,19 +64,24 @@ return {
     ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
     dependencies = {
       "mfussenegger/nvim-jdtls",
-      "williamboman/mason.nvim",
     },
     config = function()
       require("sonarlint").setup({
         server = {
           cmd = {
-            "sonarlint-language-server",
+            "java",
+            "-cp",
+            ".:/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/*",
+            "-jar",
+            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarlint-server.jar",
             -- Ensure that sonarlint-language-server uses stdio channel
             "-stdio",
             "-analyzers",
             -- paths to the analyzers you need, using those for python and java in this example
-            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
-            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjs.jar"),
+            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarpython.jar",
+            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarjs.jar",
+            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonartext.jar",
+            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarhtml.jar",
           },
         },
         filetypes = {

@@ -5,7 +5,7 @@ return {
   },
   {
     "junkblocker/git-time-lapse",
-    lazy = false
+    lazy = false,
   },
   {
     "pwntester/octo.nvim",
@@ -18,43 +18,43 @@ return {
     config = function()
       require("octo").setup({
         use_local_fs = true,
-        enable_builtin = true
+        enable_builtin = true,
       })
     end,
   },
   {
     "topaxi/gh-actions.nvim",
-    cmd = 'GhActions',
+    cmd = "GhActions",
     keys = {
-      { '<leader>gha', '<cmd>GhActions<CR>', desc = "Open GH Actions" },
+      { "<leader>gha", "<cmd>GhActions<CR>", desc = "Open GH Actions" },
     },
-    build = 'make',
-    dependencies = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' },
+    build = "make",
+    dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
     opts = {},
     config = function(_, opts)
-      require('gh-actions').setup(opts)
-    end
+      require("gh-actions").setup(opts)
+    end,
   },
   {
     "ldelossa/gh.nvim",
     lazy = false,
     dependencies = { { "ldelossa/litee.nvim" } },
     config = function()
-      require('litee.lib').setup({})
-      require('litee.gh').setup({
+      require("litee.lib").setup({})
+      require("litee.gh").setup({
         -- remap the arrow keys to resize any litee.nvim windows.
-        map_resize_keys       = false,
+        map_resize_keys = false,
         -- do not map any keys inside any gh.nvim buffers.
-        disable_keymaps       = false,
+        disable_keymaps = false,
         -- the icon set to use.
-        icon_set              = "default",
+        icon_set = "default",
         -- any custom icons to use.
-        icon_set_custom       = nil,
+        icon_set_custom = nil,
         -- whether to register the @username and #issue_number omnifunc completion
         -- in buffers which start with .git/
         git_buffer_completion = true,
         -- defines keymaps in gh.nvim buffers.
-        keymaps               = {
+        keymaps = {
           -- when inside a gh.nvim panel, this key will open a node if it has
           -- any futher functionality. for example, hitting <CR> on a commit node
           -- will open the commit's changed files in a new gh.nvim panel.
@@ -79,9 +79,9 @@ return {
           -- inside a gh.nvim panel, if possible, open the node's web URL in your
           -- browser. useful particularily for digging into external failed CI
           -- checks.
-          goto_web = "gx"
-        }
+          goto_web = "gx",
+        },
       })
-    end
-  }
+    end,
+  },
 }
