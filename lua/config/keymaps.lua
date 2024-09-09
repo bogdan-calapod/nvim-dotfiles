@@ -21,9 +21,9 @@ map("n", "<leader>cz", "<cmd>ZenMode<CR>", { desc = "🙏 Zen mode" })
 
 -- Yank file path
 map("n", "<leader>y", function()
-  local filepath = vim.fn.expand('%')
-  vim.fn.setreg('+', filepath)
-end, { desc = 'Yank file path' })
+  local filepath = vim.fn.expand("%")
+  vim.fn.setreg("+", filepath)
+end, { desc = "Yank file path" })
 
 -- Octo map
 map("n", "<leader>go", "<cmd>Octo<CR>", { desc = "Open Octo" })
@@ -32,9 +32,12 @@ map("n", "<leader>gop", "<cmd>Octo <CR>", { desc = "Pull Request" })
 map("n", "<leader>gor", "<cmd>Octo <CR>", { desc = "Review" })
 map("n", "<leader>got", "<cmd>Octo <CR>", { desc = "Thread" })
 map("n", "<leader>gopl", "<cmd>Octo pr list<CR>", { desc = "Open PR list" })
-map("n", "<leader>gopm",
+map(
+  "n",
+  "<leader>gopm",
   "<cmd>Octo search is:pr review-requested:bogdan-calapod is:open draft:false<CR>",
-  { desc = "Open own PR list" })
+  { desc = "Open own PR list" }
+)
 map("n", "<leader>gopc", "<cmd>Octo pr create<CR>", { desc = "Create PR" })
 map("n", "<leader>gopk", "<cmd>Octo pr checkout<CR>", { desc = "Checkout PR" })
 map("n", "<leader>gopb", "<cmd>Octo pr browser<CR>", { desc = "Open PR in browser" })
@@ -55,7 +58,9 @@ map("n", "<leader>gotu", "<cmd>Octo thread unresolve<CR>", { desc = "Unresolve t
 map("n", "<leader>gt", "<cmd>GitTimeLapse<CR>", { desc = "Git Timelapse" })
 
 -- Eureka
-map("n", "<leader>o", function() require("eureka").show_notes() end, { desc = "Eureka" })
+map("n", "<leader>o", function()
+  require("eureka").show_notes()
+end, { desc = "Eureka" })
 
 -- Notify
 map("n", "<leader>uN", "<cmd>Telescope notify <CR>", { desc = "View all notifications" })
