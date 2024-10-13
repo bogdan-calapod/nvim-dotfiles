@@ -14,6 +14,9 @@ return {
     "dgagn/diagflow.nvim",
     opts = { scope = "line" },
   },
+  {
+    "chrisbra/csv.vim",
+  },
   { -- Merge lines
     "Wansmer/treesj",
     keys = {
@@ -51,7 +54,6 @@ return {
       ui = { border = "rounded" },
       ensure_installed = {
         "bash-language-server",
-        "prettierd",
         "css-lsp",
         "ruff",
         "pyright",
