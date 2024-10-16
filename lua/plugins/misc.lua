@@ -4,5 +4,9 @@ return {
     config = function()
       require("package-info").setup()
     end,
-  }
+  },
+  {
+    "mcauley-penney/visual-whitespace.nvim",
+    config = true,
+  },
 }
