@@ -55,7 +55,7 @@ return {
       ensure_installed = {
         "bash-language-server",
         "css-lsp",
-        "ruff",
+        "ruff-lsp",
         "pyright",
         "autopep8",
         "shellcheck",
