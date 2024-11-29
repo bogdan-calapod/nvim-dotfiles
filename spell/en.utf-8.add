@@ -611,3 +611,5 @@ nginx
 saml
 grafana
 OTP
+hypervisor
+OpenAPI
