@@ -1,9 +1,5 @@
 return {
   {
-    "sphamba/smear-cursor.nvim",
-    opts = {},
-  },
-  {
     "rmagatti/auto-session",
     lazy = false,
 

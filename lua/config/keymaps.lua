@@ -62,8 +62,6 @@ map("n", "<leader>o", function()
   require("eureka").show_notes()
 end, { desc = "Eureka" })
 
--- Notify
-map("n", "<leader>uN", "<cmd>Telescope notify <CR>", { desc = "View all notifications" })
 -- Advanced Git Search
 map("n", "<leader>ga", function() end, { desc = "Advanced Git" })
 map("n", "<leader>gad", "<cmd>Telescope advanced_git_search diff_branch_file<CR>", { desc = "Diff with branch " })

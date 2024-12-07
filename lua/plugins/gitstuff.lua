@@ -8,6 +8,54 @@ return {
     lazy = false,
   },
   {
+    "topaxi/pipeline.nvim",
+    -- optional, you can also install and use `yq` instead.
+    build = "make",
+    ---@type pipeline.Config
+    opts = {
+      --- The browser executable path to open workflow runs/jobs in
+      browser = nil,
+      --- Interval to refresh in seconds
+      refresh_interval = 10,
+      --- How much workflow runs and jobs should be indented
+      indent = 2,
+      keys = {
+        { "<leader>ci", "<cmd>Pipeline<cr>", desc = "Open pipeline.nvim" },
+      },
+      icons = {
+        workflow_dispatch = "⚡️",
+        conclusion = {
+          success = "🟢",
+          failure = "🔴",
+          startup_failure = "🟠",
+          cancelled = "🚫",
+          skipped = "🛞",
+        },
+        status = {
+          unknown = "⚪",
+          pending = "⌛",
+          queued = "🕒",
+          requested = "📥",
+          waiting = "⏰",
+          in_progress = "🏃",
+        },
+      },
+      split = {
+        relative = "editor",
+        position = "right",
+        size = 60,
+        win_options = {
+          wrap = false,
+          number = false,
+          foldlevel = nil,
+          foldcolumn = "0",
+          cursorcolumn = false,
+          signcolumn = "no",
+        },
+      },
+    },
+  },
+  {
     "pwntester/octo.nvim",
     lazy = false,
     dependencies = {
