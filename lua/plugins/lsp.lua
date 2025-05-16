@@ -62,40 +62,40 @@ return {
       },
     },
   },
-  {
-    url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
-    ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
-    dependencies = {
-      "mfussenegger/nvim-jdtls",
-    },
-    config = function()
-      require("sonarlint").setup({
-        server = {
-          cmd = {
-            "java",
-            "-cp",
-            ".:/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/*",
-            "-jar",
-            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarlint-server.jar",
-            -- Ensure that sonarlint-language-server uses stdio channel
-            "-stdio",
-            "-analyzers",
-            -- paths to the analyzers you need, using those for python and java in this example
-            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarpython.jar",
-            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarjs.jar",
-            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonartext.jar",
-            "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarhtml.jar",
-          },
-        },
-        filetypes = {
-          "python",
-          "typescript",
-          "typescriptreact",
-          "typescript.tsx",
-        },
-      })
-    end,
-  },
+  -- {
+  --   url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
+  --   ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
+  --   dependencies = {
+  --     "mfussenegger/nvim-jdtls",
+  --   },
+  --   config = function()
+  --     require("sonarlint").setup({
+  --       server = {
+  --         cmd = {
+  --           "java",
+  --           "-cp",
+  --           ".:/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/*",
+  --           "-jar",
+  --           "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarlint-server.jar",
+  --           -- Ensure that sonarlint-language-server uses stdio channel
+  --           "-stdio",
+  --           "-analyzers",
+  --           -- paths to the analyzers you need, using those for python and java in this example
+  --           "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarpython.jar",
+  --           "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarjs.jar",
+  --           "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonartext.jar",
+  --           "/Users/bogdan/repos/misc/nvim-dotfiles/sonarlint/sonarhtml.jar",
+  --         },
+  --       },
+  --       filetypes = {
+  --         "python",
+  --         "typescript",
+  --         "typescriptreact",
+  --         "typescript.tsx",
+  --       },
+  --     })
+  --   end,
+  -- },
   {
     "MeanderingProgrammer/markdown.nvim",
     main = "render-markdown",
