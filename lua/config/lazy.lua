@@ -22,7 +22,7 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   ui = {
-    border = 'rounded'
+    border = "rounded",
   },
   install = { colorscheme = { "tokyonight", "habamax", "catppuccin" } },
   checker = { enabled = false }, -- automatically check for plugin updates

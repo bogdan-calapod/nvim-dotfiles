@@ -26,3 +26,5 @@ if os.getenv("WSL_DISTRO_NAME") then
 else
   vim.opt.clipboard:append({ "unnamedplus" })
 end
+
+vim.opt.spell = true
