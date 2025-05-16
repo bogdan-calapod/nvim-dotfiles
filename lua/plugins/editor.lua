@@ -16,13 +16,9 @@ return {
       },
     },
   },
-  { -- Add indent indicators
-    "lukas-reineke/virt-column.nvim",
-    opts = {
-      char = "▎",
-      highlight = "CursorLineSign",
-      virtcolumn = "80,120",
-    },
+  {
+    "ecthelionvi/NeoColumn.nvim",
+    opts = { NeoColumn = { "120" } },
   },
   { -- Auto save on focus lose
     "tmillr/sos.nvim",
