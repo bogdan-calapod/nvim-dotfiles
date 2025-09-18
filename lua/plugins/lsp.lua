@@ -48,20 +48,20 @@ return {
       },
     },
   },
-  { -- Mason config
-    "williamboman/mason.nvim",
-    opts = {
-      ui = { border = "rounded" },
-      ensure_installed = {
-        "bash-language-server",
-        "css-lsp",
-        "ruff-lsp",
-        "pyright",
-        "autopep8",
-        "shellcheck",
-      },
-    },
-  },
+  -- { -- Mason config
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ui = { border = "rounded" },
+  --     ensure_installed = {
+  --       "bash-language-server",
+  --       "css-lsp",
+  --       "ruff-lsp",
+  --       "pyright",
+  --       "autopep8",
+  --       "shellcheck",
+  --     },
+  --   },
+  -- },
   -- {
   --   url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
   --   ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
